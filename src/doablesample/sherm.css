@@ -1,0 +1,105 @@
+.containedcal {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    flex-direction: column;
+
+}
+
+.cal {
+
+    width: 100%;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.calObj {
+
+    align-items: center;
+    align-content: center;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 250px;
+    border: 0.5px solid rgba(0, 0, 0, 0.53);
+
+}
+
+.addButton{
+    width: 95%;
+    margin-top: 5%;
+}
+
+.headTitle {
+    display: flex;
+    background-color:whitesmoke;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.headTitle h3 {
+    font-family: Poppins;
+    font-size: 1.2rem;
+    align-self: center;
+}
+
+.doableViewCal {
+    background-color: #bad343;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 6%;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid black ;
+    margin-top: 5%;
+
+
+
+}
+
+.infoName .bubble {
+    font-family: Poppins;
+}
+
+.timeBubble{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #bb2d3b;
+    color: whitesmoke;
+    border-radius: 20px;
+    border: 1px solid black ;
+    padding: 0px;
+    margin: 0px;
+
+
+
+}
+
+.typeBubble {
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #f5c4ff;
+    color: rgba(82, 0, 168, 0.83);
+    border-radius: 20px;
+    border: 1px solid black ;
+    font-size: 1rem;
+    padding: 3%;
+
+}
+
+.deadline {
+    font-family: Poppins;
+    color: #bb2d3b;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 10px;
+}

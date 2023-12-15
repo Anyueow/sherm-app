@@ -1,0 +1,33 @@
+/* font.css */
+
+/* League Spartan Medium */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('./LeagueSpartan-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+/* League Spartan Regular */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('./LeagueSpartan-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+/* League Spartan SemiBold */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('./LeagueSpartan-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+}
+
+/* League Spartan Thin */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('./LeagueSpartan-Thin.ttf') format('truetype');
+    font-weight: 100; /* Thin */
+    font-style: normal;
+}

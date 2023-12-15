@@ -1,0 +1,159 @@
+/* PopupForm.css */
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+
+.medium-text {
+    font-weight: 500; /* Medium */
+}
+
+.regular-text {
+    font-weight: 400; /* Regular */
+}
+
+.semibold-text {
+    font-weight: 600; /* SemiBold */
+}
+
+.thin-text {
+    font-weight: 100; /* Thin */
+}
+
+.modal-content {
+    align-items: center;
+    align-content: center;
+
+    padding: 5%;
+    background-color: #f5f5f5; /* Light grey background for slight contrast */
+    border-radius: 1rem;
+    border: none; /* Removing the default border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Shadow for 3D effect */
+}
+
+/* The modal header */
+.modal-header {
+    border-bottom: none; /* Removing the default border */
+    padding-bottom: 0; /* Reducing space to the body */
+    width: 89%;
+}
+
+/* The title in the modal header */
+.modal-title {
+    font-family: League Spartan;
+    font-weight: 600;
+    font-size: 1.5rem; /* Larger font size for the title */
+    color: #333; /* Dark text color for contrast */
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 3.3%;
+    color: black;
+    border-radius: 11px;
+}
+
+/* The modal body */
+.modal-body {
+    font-size: 1.4rem; /* Larger font size for the title */
+
+    padding: 20px; /* More padding for the body content */
+}
+
+
+/* Close button in the header */
+.close {
+    font-size: 1.4em; /* Making the close symbol slightly larger */
+    color: #333; /* Darker color for the close symbol */
+}
+
+.close:hover, .close:focus {
+    color: #000; /* Even darker on hover/focus */
+}
+
+.modal-backdrop.show {
+    opacity: 0.5 !important; /* This controls the opacity of the background */
+    background-color: #000; /* This sets the background color to black (you can choose any color) */
+}
+
+.businessform-p{
+    font-size: 80%;
+    text-align: center;
+    color: #333;
+}
+
+.success-business-form .modal-body{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+.modal-dialog {
+    flex: 1;
+    width: 55vw;
+    position: absolute!important;
+    top: 10%;
+    left: 25%;
+    z-index: 10;
+}
+/* Styles for the title */
+.popup-title {
+    font-size: 1.5em; /* Example size, adjust as needed */
+    font-weight: bold;
+    color: #333; /* Example color, adjust as needed */
+    margin-bottom: 15px; /* Spacing below the title */
+    line-height: 1.4;
+
+}
+
+/* Styles for the description */
+.popup-description {
+    font-size: 1em; /* Example size, adjust as needed */
+    color: #3d3d3d; /* Example color, adjust as needed */
+    margin-bottom: 3%;
+    line-height: 1.4;
+
+}
+
+/* floatpopup.css */
+
+.popup-description span {
+    display: block;
+    margin-bottom: 2px; /* Space between bullet points */
+    /* Add any additional styling you want for each bullet point */
+}
+
+.popup-descriptiondesc {
+    font-size: 1.7rem; /* Example size, adjust as needed */
+
+    color: #888888; /* Example color, adjust as needed */
+    margin-bottom: 3%;
+
+}
+
+
+/* floatpopup.css */
+
+.custom-close-button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 38px;
+    right: 30px;
+    font-size: 1.58em; /* Adjust size as needed */
+    color: #000; /* Adjust color as needed */
+    background-color: rgba(171, 170, 170, 0.33);
+    border-radius: 12px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    padding: 3.2%;
+}
+
+.custom-close-button:hover {
+    color: #0056b3; /* Adjust hover color as needed */
+    background-color: #ececff;
+
+    cursor: pointer;
+}
+
+.butt {
+    align-items: center;
+    justify-content: center;
+}
