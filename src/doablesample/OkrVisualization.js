@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Col, Container, Row } from "react-bootstrap";
-import "./test.css";
+import {Button, Col, Container, Row} from "react-bootstrap";
+import "./okrviz.css";
 import DetailPopUp from "./forms/DetailPopUp";
 
-function Test() {
+function OkrVisualization() {
     const objectives = {
         "Increase User Registration & Engagement": [
             {
@@ -98,4 +98,4 @@ function Test() {
     );
 }
 
-export default Test;
+export default OkrVisualization;
