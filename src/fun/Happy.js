@@ -1,6 +1,5 @@
 import React from 'react';
-import './Happy.css'; // Assuming you have a CSS file named Happy.css
-
+import "./Happy.css";
 const Happy = () => {
     return (
         <div className="container">

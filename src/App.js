@@ -24,7 +24,7 @@ const ToggleButton = () => {
         height:"20vh"}}>
 
         <Button
-            className="toggleButton" onClick={togglePage}>Toggle Page</Button>
+            className="toggleButton" onClick={togglePage}> Switch The Girl</Button>
         </Container>
     );
 };
