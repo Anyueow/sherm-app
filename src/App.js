@@ -1,9 +1,10 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Routes, useLocation, useNavigate} from 'react-router-dom';
-import DoableCreator from "./doablesample/DoableCreator";
-import OkrVisualization from "./doablesample/OkrVisualization";
-import OkrProgress from "./doablesample/OkrProgress";
-import {Button} from "react-bootstrap";
+
+import {Button, Container} from "react-bootstrap";
+import Happy from "./fun/Happy";
+import Sad from "./fun/Sad";
+
 
 const ToggleButton = () => {
     const navigate = useNavigate();
@@ -18,7 +19,13 @@ const ToggleButton = () => {
     };
 
     return (
-        <Button onClick={togglePage}>Toggle Page</Button>
+        <Container style={{display:"flex",
+            justifyContent:"center", alignItems:"center",
+        height:"20vh"}}>
+
+        <Button
+            className="toggleButton" onClick={togglePage}>Toggle Page</Button>
+        </Container>
     );
 };
 
@@ -28,8 +35,8 @@ const App = () => {
         <Router>
             <ToggleButton />
             <Routes>
-                <Route path="/page-one" element={<OkrVisualization />} />
-                <Route path="/page-two" element={<OkrProgress />} />
+                <Route path="/page-one" element={<Happy />} />
+                <Route path="/page-two" element={<Sad />} />
             </Routes>
         </Router>
     );
