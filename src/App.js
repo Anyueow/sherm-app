@@ -21,7 +21,7 @@ const ToggleButton = () => {
     return (
         <Container style={{display:"flex",
             justifyContent:"center", alignItems:"center",
-        height:"20vh"}}>
+        height:"10vh"}}>
 
         <Button
             className="toggleButton" onClick={togglePage}> Switch The Girl</Button>
