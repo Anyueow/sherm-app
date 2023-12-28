@@ -11,20 +11,27 @@ const ToggleButton = () => {
     const location = useLocation();
 
     const togglePage = () => {
-        if (location.pathname === '/page-one' || location.pathname === '/') {
-            navigate('/page-two');
+        let newPage = '';
+        if (location.pathname === '/happy' || location.pathname === '/') {
+            newPage = 'BIG MAD';
+            navigate('/mad');
         } else {
-            navigate('/page-one');
+            newPage = 'HAPPY';
+            navigate('/happy');
         }
+
+        sendEmail(newPage);
+    };
+
+    const sendEmail = (pageName) => {
+        const subject = encodeURIComponent('ALERT!');
+        const body = encodeURIComponent(`Praveen has selected ${pageName}`);
+        window.location.href = `mailto:anyushah@gmail.com?subject=${subject}&body=${body}`;
     };
 
     return (
-        <Container style={{display:"flex",
-            justifyContent:"center", alignItems:"center",
-        height:"10vh"}}>
-
-        <Button
-            className="toggleButton" onClick={togglePage}> Switch The Girl</Button>
+        <Container style={{display: "flex", justifyContent: "center", alignItems: "center", height: "20vh"}}>
+            <Button className="toggleButton" onClick={togglePage}>Switch The Girl</Button>
         </Container>
     );
 };
@@ -35,8 +42,8 @@ const App = () => {
         <Router>
             <ToggleButton />
             <Routes>
-                <Route path="/page-one" element={<Happy />} />
-                <Route path="/page-two" element={<Sad />} />
+                <Route path="/happy" element={<Happy />} />
+                <Route path="/mad" element={<Sad />} />
             </Routes>
         </Router>
     );
