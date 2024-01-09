@@ -87,7 +87,7 @@ body {
     flex: 1;
     width: 55vw;
     position: absolute!important;
-    top: 10%;
+    top: 35%;
     left: 25%;
     z-index: 10;
 }

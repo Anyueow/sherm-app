@@ -4,9 +4,45 @@ import "./okrprog.css";
 import DetailPopUp from "./forms/DetailPopUp";
 
 
-const HorizontalProgressBar = ({ progress }) => (
-    <ProgressBar now={progress} label={`${progress}%`}  variant={"info"}/>
-);
+const HorizontalProgressBar = ({ progress, barColor, backgroundColor }) => {
+    const width = 300; // Total width of the progress bar
+    const height = 20; // Height of the progress bar
+
+    const progressWidth = (progress / 100) * width; // Width of the filled part of the bar
+
+    return (
+        <svg width={width} height={height}>
+            {/* Background rectangle */}
+            <rect
+                x="0"
+                y="0"
+                width={width}
+                height={height}
+                fill={backgroundColor || "#e0e0e0"}
+            />
+            {/* Foreground rectangle (progress) */}
+            <rect
+                x="0"
+                y="0"
+                width={progressWidth}
+                height={height}
+                fill={barColor || "#4caf50"}
+            />
+            {/* Text */}
+            <text
+                x={width / 2}
+                y={height / 2}
+                textAnchor="middle"
+                alignmentBaseline="central"
+                fontSize="12"
+                fill="white"
+            >
+                {`${progress}%`}
+            </text>
+        </svg>
+    );
+};
+
 const CircularProgressBar = ({ progress, circleColor, percentageColor }) => {
     const radius = 30; // Half of the original radius
     const circumference = 2 * Math.PI * radius;
@@ -47,18 +83,18 @@ function OkrProgress() {
             {
                 title: "40% Increase in Registrations",
                 detail: "Achieve a 40% increase in new user registrations on the FindHer platform by the end of the quarter.",
-                progress: 40
+                progress: 60
             },
             {
                 title: "50% More User Interaction",
                 detail: "Increase user interaction with the platform (measured by activities such as completing profiles, posting reviews, and engaging with resources) by 50%.",
-                progress: 40
+                progress: 90
 
             },
             {
                 title: "Gather User Feedback",
                 detail: "Collect and analyze feedback from at least 100 users to redesign website / conversion pipeline",
-                progress: 40
+                progress: 20
 
             },
         ],
@@ -66,19 +102,19 @@ function OkrProgress() {
             {
                 title: "Grow following on Instagram and LinkedIn",
                 detail: "Grow Instagram and LinkedIn followers by 30% and achieve an average engagement rate of 5% on posted content",
-                progress: 40
+                progress: 76
 
             },
             {
                 title: "Launch a Successful Influencer Campaign",
                 detail: "Collaborate with at least 10 influencers in the target demographic, aiming for a total reach of 500,000 impressions and a 10% increase in traffic to the FindHer website from social media channels",
-                progress: 40
+                progress: 51
 
             },
             {
                 title: "Build brand awareness",
                 detail: "Consistently post 4 times a week, 1 reel per week. Reach 100 people each day through insights.",
-                progress: 40
+                progress: 95
 
             },
         ],
@@ -86,19 +122,19 @@ function OkrProgress() {
             {
                 title: "Reach out to 20 people daily",
                 detail: "Target people wth HR titles, reach out on LinkedIn, and convert to a sales call",
-                progress: 40
+                progress: 67
 
             },
             {
                 title: "Build database of Open Positions",
                 detail: "Convert companies to fill out form and build database of open positions at 'partner' companies",
-                progress: 40
+                progress: 99
 
             },
             {
                 title: "Build 50 Company pages",
                 detail: "get more detailed information from comapnies, send surverys to female employees, build their 'company overview' page on FindHer",
-                progress: 40
+                progress: 5
 
             },
         ],
@@ -149,7 +185,7 @@ function OkrProgress() {
                         return (
                             <Col key={index} className="centerTreeCol" onClick={() => handleObjClick(obj)}>
                                 <h1 className="titleObj"> {obj} </h1>
-                                <HorizontalProgressBar progress={averageProgress} />
+                                <HorizontalProgressBar progress={averageProgress} barColor="#5904ff" backgroundColor="#ddd" />
                                 <div className="line"></div>
                                 {objectives[obj].map((goal, idx) => (
                                     <Row key={idx} className="centerTreeRow">

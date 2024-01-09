@@ -4,6 +4,9 @@ import {BrowserRouter as Router, Route, Routes, useLocation, useNavigate} from '
 import {Button, Container} from "react-bootstrap";
 import Happy from "./fun/Happy";
 import Sad from "./fun/Sad";
+import OkrVisualization from "./doablesample/OkrVisualization";
+import okrProgress from "./doablesample/OkrProgress";
+import OkrProgress from "./doablesample/OkrProgress";
 
 
 const ToggleButton = () => {
@@ -31,7 +34,7 @@ const ToggleButton = () => {
 
     return (
         <Container style={{display: "flex", justifyContent: "center", alignItems: "center", height: "20vh"}}>
-            <Button className="toggleButton" onClick={togglePage}>Switch The Girl</Button>
+            <Button className="toggleButton" onClick={togglePage}>See Progress </Button>
         </Container>
     );
 };
@@ -42,8 +45,8 @@ const App = () => {
         <Router>
             <ToggleButton />
             <Routes>
-                <Route path="/happy" element={<Happy />} />
-                <Route path="/mad" element={<Sad />} />
+                <Route path="/happy" element={<OkrVisualization />} />
+                <Route path="/mad" element={<OkrProgress />} />
             </Routes>
         </Router>
     );
